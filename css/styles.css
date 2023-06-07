@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /* ### Theme 1
+
+#### Backgrounds */
+
+  --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%); /* (main background) */
+  --Very-dark-desaturated-blue: hsl(
+    223,
+    31%,
+    20%
+  ); /*  (toggle background, keypad background) */
+  --Very-dark-desaturated-blue-screen: hsl(
+    224,
+    36%,
+    15%
+  ); /*  (screen background) */
+
+  /* #### Keys */
+
+  --Desaturated-dark-blue-reset: hsl(225, 21%, 49%); /* (key background)*/
+  --Desaturated-dark-blue: hsl(224, 28%, 35%); /* (key shadow) */
+
+  --Red: hsl(6, 63%, 50%); /* (key background, toggle)*/
+  --Dark-red: hsl(6, 70%, 34%); /*  (key shadow) */
+
+  --Light-grayish-orange: hsl(30, 25%, 89%); /* (key background)*/
+  --Grayish-orange: hsl(28, 16%, 65%); /* (key shadow)*/
+
+  /* #### Text */
+
+  --Very-dark-rayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Theme 2
+
+#### Backgrounds */
+
+  --Light-gray: hsl(0, 0%, 90%); /* (main background) */
+  --Grayish-red: hsl(0, 5%, 81%); /* (toggle background, keypad background)*/
+  --Very-light-gray: hsl(0, 0%, 93%); /* (screen background) */
+
+  /* #### Keys */
+
+  --Dark-moderate-cyan: hsl(185, 42%, 37%); /* (key background)*/
+  --Very-dark-cyan: hsl(185, 58%, 25%); /* (key shadow) */
+
+  --Orange: hsl(25, 98%, 40%); /* (key background, toggle)*/
+  --Dark-orange: hsl(25, 99%, 27%); /* (key shadow)*/
+
+  --Light-grayish-yellow: hsl(45, 7%, 89%); /* (key background)*/
+  --Dark-grayish-orange: hsl(35, 11%, 61%); /* (key shadow)*/
+
+  /* #### Text */
+
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --White: hsl(0, 0%, 100%); /* (text)*/
+
+  /* ### Theme 3
+
+#### Backgrounds */
+
+  --Very-dark-violet: hsl(268, 75%, 9%); /* (main background)*/
+  --Very-dark-violet: hsl(
+    268,
+    71%,
+    12%
+  ); /* (toggle background, keypad background, screen background)*/
+
+  /* #### Keys */
+
+  --Dark-violet: hsl(281, 89%, 26%); /* (key background)*/
+  --Vivid-magenta: hsl(285, 91%, 52%); /* (key shadow)*/
+
+  --Pure-cyan: hsl(176, 100%, 44%); /* (key background, toggle)*/
+  --Soft-cyan: hsl(177, 92%, 70%); /* (key shadow)*/
+
+  --Very-dark-violet: hsl(268, 47%, 21%); /* (key background)*/
+  --Dark-magenta: hsl(290, 70%, 36%); /* (key shadow) */
+
+  /* #### Text */
+
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  --White: hsl(0, 0%, 100%); /* (text)*/
+}
+
+body {
+  width: 100%;
+  max-width: 1440px;
+  background-color: var(--Very-dark-desaturated-blue-main);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  position: relative;
+  left: 39.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.toggle p {
+  margin: 0 0.5rem;
+  color: var(--White);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.control {
+  margin-bottom: 3.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control p {
+  float: right;
+  margin-right: 1rem;
+  color: var(--White);
+  font-size: 2.2rem;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.themeBtn {
+  display: flex;
+}
+
+.btnBg {
+  background-color: var(--Very-dark-desaturated-blue-screen);
+  height: 2.3rem;
+  width: 6rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
+  border-radius: 3rem;
+  top: 0.4rem;
+  right: 4.1rem;
+}
+
+/* .control p::after {
+  content: "";
+  width: 6rem;
+  height: 2.3rem;
+  background-color: var(--Very-dark-desaturated-blue-screen);
+  position: absolute;
+  top: 0;
+  right: -7rem;
+  border-radius: 3rem;
+}
+
+.control p::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
+  position: absolute;
+  top: 0.4rem;
+  right: -3rem;
+  border-radius: 3rem;
+  z-index: 1;
+} */
+
+.screen {
+  width: 45rem;
+}
+
+#screen {
+  width: 100%;
+  height: 10rem;
+  border-radius: 1rem;
+  background-color: hsl(224, 36%, 15%);
+  color: var(--White);
+  border: 0;
+  outline: none;
+  text-align: right;
+  padding-right: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.2rem;
+  color: var(--White);
+}
+
+button {
+  width: 9rem;
+  padding: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0 0 hsl(224deg, 28%, 35%);
+  margin: 1rem 1rem;
+  font-size: 3.2rem;
+}
+
+.btn {
+  display: flex;
+  width: 45rem;
+  flex-flow: wrap;
+  background-color: hsl(223, 31%, 20%);
+  padding: 1rem 0.5rem;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+}
+
+.reset,
+.delete {
+  box-shadow: 0 0.3rem 0 0 hsl(224, 28%, 35%);
+  background-color: var(--Desaturated-dark-blue-reset);
+  color: var(--White);
+}
+
+.equal {
+  box-shadow: 0 0.3rem 0 0 hsl(224, 28%, 35%);
+  background-color: var(--Red);
+  color: var(--White);
+}
+
+.reset,
+.equal {
+  width: 20rem;
+}
+
+.num {
+  font-size: 3.2rem;
+}
+
+/* input {
+  height: 8rem;
+  width: 40rem;
+} */
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 40%;
+  }
+}
