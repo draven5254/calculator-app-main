@@ -127,7 +127,7 @@ html {
   display: flex;
   position: relative;
   left: 39.5rem;
-  margin-bottom: 0.5rem;
+  top: 1rem;
 }
 
 .toggle p {
@@ -138,17 +138,19 @@ html {
 }
 
 .control {
-  margin-bottom: 3.5rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  top: 2rem;
+  right: -31rem;
 }
 
-.control p {
+.control h1 {
   float: right;
   margin-right: 1rem;
   color: var(--White);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
@@ -164,16 +166,23 @@ html {
   width: 6rem;
   border-radius: 2rem;
   position: relative;
+  display: flex;
 }
 
-.circle {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+.btn1,
+.btn2,
+.btn3 {
+  background-color: var(--Very-dark-desaturated-blue-screen);
+  margin-top: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+}
+
+.selected {
   background-color: red;
-  border-radius: 3rem;
-  top: 0.4rem;
-  right: 4.1rem;
 }
 
 /* .control p::after {
@@ -222,7 +231,14 @@ h1 {
   color: var(--White);
 }
 
-button {
+.title {
+  font-size: 2.2rem;
+  color: var(--White);
+  position: relative;
+  top: -3.5rem;
+}
+
+.num {
   width: 9rem;
   padding: 1.5rem;
   outline: none;
@@ -249,27 +265,38 @@ button {
   box-shadow: 0 0.3rem 0 0 hsl(224, 28%, 35%);
   background-color: var(--Desaturated-dark-blue-reset);
   color: var(--White);
+
+  width: 9rem;
+  padding: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.5rem;
+
+  margin: 1rem 1rem;
+  font-size: 3.2rem;
 }
 
 .equal {
   box-shadow: 0 0.3rem 0 0 hsl(224, 28%, 35%);
   background-color: var(--Red);
   color: var(--White);
+
+  width: 9rem;
+  padding: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.5rem;
+
+  margin: 1rem 1rem;
+  font-size: 3.2rem;
 }
 
 .reset,
 .equal {
   width: 20rem;
 }
-
-.num {
-  font-size: 3.2rem;
-}
-
-/* input {
-  height: 8rem;
-  width: 40rem;
-} */
 
 @media screen and (max-width: 375px) {
   html {

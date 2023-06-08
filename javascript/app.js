@@ -50,19 +50,17 @@ const setTheme = (
   numPadBg,
   equalBg,
   resDelBg,
-  fontColor,
-  circleLeft
+  fontColor
 ) => {
   const body = document.querySelector("body");
   const screen = document.querySelector("#screen");
   const keypadBgElement = document.querySelector("#keypad");
-  const numPads = document.querySelectorAll("#num");
+  const numPads = document.querySelectorAll(".num");
   const equal = document.querySelector("#equal");
   const resDel = document.querySelectorAll("#res, #del");
   const elements = document.querySelectorAll(
-    "#calc, #theme, #one, #two, #three, #screen"
+    ".title, #theme, #one, #two, #three, #screen, p"
   );
-  const circle = document.getElementById("circle");
 
   body.style.backgroundColor = bodyBg;
   screen.style.backgroundColor = screenBg;
@@ -83,8 +81,6 @@ const setTheme = (
   elements.forEach((element) => {
     element.style.color = fontColor;
   });
-
-  circle.style.left = circleLeft;
 };
 
 const del = () => {
@@ -104,11 +100,41 @@ const equal = () => {
   }
 };
 
+one.addEventListener("click", () => {
+  one.classList.add("selected");
+  const btn = document.querySelectorAll("#three, #two, .btnBg");
+  btn.forEach((element) => {
+    element.style.backgroundColor = "hsl(223, 31%, 20%)";
+  });
+});
+
+two.addEventListener("click", () => {
+  two.classList.add("selected");
+  const btn = document.querySelectorAll("#three, #one, .btnBg");
+  btn.forEach((element) => {
+    element.style.backgroundColor = "hsl(0, 5%, 81%)";
+  });
+});
+
+three.addEventListener("click", () => {
+  three.classList.add("selected");
+  const btn = document.querySelectorAll("#one, #two, .btnBg");
+  btn.forEach((element) => {
+    element.style.backgroundColor = "hsl(268, 71%, 12%)";
+  });
+});
+
 // const one = document.getElementById("one");
 // const two = document.getElementById("two");
 // const three = document.getElementById("three");
 
 // one.addEventListener("click", () => {
+//   one.classList.add("selected");
+//   const btn = document.querySelectorAll("#three, #two, .btnBg");
+//   btn.forEach((element) => {
+//     element.style.backgroundColor = "hsl(223, 31%, 20%)";
+//   });
+
 //   const body = document.querySelector("body");
 //   body.style.backgroundColor = "hsl(222, 26%, 31%)";
 
@@ -140,19 +166,22 @@ const equal = () => {
 
 //   // FONTS
 //   const elements = document.querySelectorAll(
-//     "#calc, #theme, #one, #two, #three, #screen"
+//     ".title, #theme, #one, #two, #three, #screen, p"
 //   );
 //   elements.forEach((element) => {
 //     element.style.color = "white";
 //   });
-
-//   const circle = document.getElementById("circle");
-//   circle.style.removeProperty("left");
 // });
 
 // // THEME TWO
 
 // two.addEventListener("click", () => {
+//   two.classList.add("selected");
+//   const btn = document.querySelectorAll("#one, #three, .btnBg");
+//   btn.forEach((element) => {
+//     element.style.backgroundColor = "hsl(0, 5%, 81%)";
+//   });
+
 //   const body = document.querySelector("body");
 //   body.style.backgroundColor = "hsl(0, 0%, 90%)";
 
@@ -183,19 +212,22 @@ const equal = () => {
 
 //   // FONTS
 //   const elements = document.querySelectorAll(
-//     "#calc, #theme, #one, #two, #three, #screen"
+//     ".title, #theme, #one, #two, #three, #screen, p"
 //   );
 //   elements.forEach((element) => {
 //     element.style.color = "black";
 //   });
-
-//   const circle = document.getElementById("circle");
-//   circle.style.left = "2.3rem";
 // });
 
 // // THEME THREE
 
 // three.addEventListener("click", () => {
+//   three.classList.add("selected");
+//   const btn = document.querySelectorAll("#one, #two, .btnBg");
+//   btn.forEach((element) => {
+//     element.style.backgroundColor = "hsl(268, 71%, 12%)";
+//   });
+
 //   const body = document.querySelector("body");
 //   body.style.backgroundColor = " hsl(268, 75%, 9%)";
 
@@ -230,14 +262,11 @@ const equal = () => {
 
 //   // FONTS
 //   const elements = document.querySelectorAll(
-//     "#calc, #theme, #one, #two, #three, #screen"
+//     ".title, #theme, #one, #two, #three, #screen, p"
 //   );
 //   elements.forEach((element) => {
 //     element.style.color = "hsl(52, 100%, 62%)";
 //   });
-
-//   const circle = document.getElementById("circle");
-//   circle.style.left = "4rem";
 // });
 
 // const del = () => {
